@@ -1,5 +1,4 @@
-package test;
-
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -11,6 +10,14 @@ public class HelperMethods implements HelperMethodable {
         Scanner in = new Scanner(System.in);
         System.out.print(message);
         return in.nextLine();
+    }
+    @Override
+    public Integer promptInt(String message){
+        try {
+            return Integer.parseInt(promptString(message));
+        } catch (RuntimeException e){
+            return promptInt("Введен не корректный пароль! Повторите попытку: ");
+        }
     }
 
     @Override

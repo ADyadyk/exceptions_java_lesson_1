@@ -1,2 +1,7 @@
-package PACKAGE_NAME;public interface HelperMethodable {
+import java.io.IOException;
+
+public interface HelperMethodable {
+    String promptString(String message);
+    Integer promptInt(String message);
+    boolean checkLogin(String login);
 }
