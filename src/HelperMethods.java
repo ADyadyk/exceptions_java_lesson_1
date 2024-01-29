@@ -19,7 +19,7 @@ public class HelperMethods implements HelperMethodable {
 
     @Override
     public boolean checkLogin(String login){
-        String regex = "[[abcde][_][01]]*";
+        String regex = "[abcde+_01]*";
         Pattern pattern = Pattern.compile(regex); // Создаём регулярное выражение
         return pattern.matcher(login).matches(); //
     }
