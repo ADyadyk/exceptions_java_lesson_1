@@ -1,8 +1,5 @@
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
+import java.util.regex.Pattern;
 
 public class HelperMethods implements HelperMethodable {
     @Override
@@ -22,19 +19,13 @@ public class HelperMethods implements HelperMethodable {
 
     @Override
     public boolean checkLogin(String login){
-        List<String> checkSymbols = new ArrayList<>();
-        checkSymbols.add("a");
-        checkSymbols.add("b");
-        checkSymbols.add("c");
-        checkSymbols.add("d");
-        checkSymbols.add("e");
-        checkSymbols.add("0");
-        checkSymbols.add("1");
-        checkSymbols.add("_");
+        String regex = "[[abcde][_][01]]*";
+        Pattern pattern = Pattern.compile(regex); // Создаём регулярное выражение
+        return pattern.matcher(login).matches(); //
+    }
 
-        List<String> inputting = new ArrayList<>(Arrays.asList(login.split("")));
-        inputting.removeIf(checkSymbols::contains);
-
-        return inputting.isEmpty();
+    public boolean askAgain(){
+        String temp = promptString("Ещё раз войти? (y/n)");
+        return !Objects.equals(temp, "n");
     }
 }
