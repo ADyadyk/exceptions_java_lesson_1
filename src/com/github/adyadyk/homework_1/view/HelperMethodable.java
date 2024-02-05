@@ -1,4 +1,4 @@
-import java.io.IOException;
+package com.github.adyadyk.homework_1.view;
 
 public interface HelperMethodable {
     String promptString(String message);

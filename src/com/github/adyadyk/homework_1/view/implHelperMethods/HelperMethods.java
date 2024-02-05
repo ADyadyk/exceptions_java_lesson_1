@@ -1,3 +1,7 @@
+package com.github.adyadyk.homework_1.view.implHelperMethods;
+
+import com.github.adyadyk.homework_1.view.HelperMethodable;
+
 import java.util.*;
 import java.util.regex.Pattern;
 

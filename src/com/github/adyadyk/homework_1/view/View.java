@@ -1,3 +1,7 @@
+package com.github.adyadyk.homework_1.view;
+
+import com.github.adyadyk.homework_1.view.implHelperMethods.HelperMethods;
+
 import java.util.Objects;
 
 public class View {
