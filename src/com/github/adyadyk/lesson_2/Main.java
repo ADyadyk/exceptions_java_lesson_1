@@ -36,6 +36,6 @@ public class Main {
 //        System.out.println(Task2.sum2d(arr3));
 
         // Вызов Task 3
-        Task3.run();
+//        Task3.run();
     }
 }
